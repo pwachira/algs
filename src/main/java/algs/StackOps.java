@@ -1,7 +1,6 @@
 package algs;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+
 
 import java.util.NoSuchElementException;
 
@@ -55,21 +54,5 @@ public class StackOps {
         }
 
     }
-
-    public static void main(String[] args) {
-
-        Stack<Integer> stack = new StackOps().new StackImpl<Integer>();
-        stack.push(5);
-        stack.push(4);
-        stack.push(3);
-        stack.pop();
-        int p = stack.pop();
-
-        System.out.println(p);
-        System.out.println(stack.size());
-
-        assertThat(p, is(4));
-        assertThat(stack.size(),is(1));
-
-    }
 }
+

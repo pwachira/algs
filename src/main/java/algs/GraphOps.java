@@ -1,16 +1,14 @@
 package algs;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 public class GraphOps{
-        interface Graph {
+        public interface Graph {
             public LinkedList<Integer>[]  adj();
             public void addEdge(int v, int w);
             
@@ -126,26 +124,5 @@ public class GraphOps{
             }
          
         }        
-        public static void main(String...args) {
-            GraphOps ops = new GraphOps();
-            Graph g = ops.new GraphImpl(7);
-            g.addEdge(0,1);
-            g.addEdge(0,2);
-            g.addEdge(0,5);
-            g.addEdge(0,6);
-            g.addEdge(5,3);
-            g.addEdge(5,4);
-            g.addEdge(6,4);
-            
-            List<Integer> pathDFS = ops.new DFS(g).search(5);
-            pathDFS.stream().forEach(v -> System.out.print(v+" "));
-            System.out.print("\n");
-            assertThat(pathDFS, is(Arrays.asList(5,0,1,2,6,4,3)));
-            
-            List<Integer> pathBFS = ops.new BFS(g).search(5);
-            assertThat(pathBFS, is(Arrays.asList(5,0,3,4,1,2,6)));
-            pathBFS.stream().forEach(v -> System.out.print(v+" "));
-                       
-            
-        }
+
 }
