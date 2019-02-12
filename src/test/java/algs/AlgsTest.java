@@ -13,9 +13,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class AlgsTest {
-    @Test 
+    @Test
     public void testGraph() {
-    	
+
             GraphOps ops = new GraphOps();
             Graph g = ops.new GraphImpl(7);
             g.addEdge(0,1);
@@ -25,21 +25,19 @@ public class AlgsTest {
             g.addEdge(5,3);
             g.addEdge(5,4);
             g.addEdge(6,4);
-            
+
             List<Integer> pathDFS = ops.new DFS(g).search(5);
             pathDFS.stream().forEach(v -> System.out.print(v+" "));
             System.out.print("\n");
             assertThat(pathDFS, is(Arrays.asList(5,0,1,2,6,4,3)));
-                        
+
             List<Integer> pathBFS = ops.new BFS(g).search(5);
             assertThat(pathBFS, is(Arrays.asList(5,0,3,4,1,2,6)));
             pathBFS.stream().forEach(v -> System.out.print(v+" "));
-                       
-
     }
-    
 
-    @Test 
+
+    @Test
     public void testStack() {
 
         Stack<Integer> stack = new StackOps().new StackImpl<Integer>();
@@ -49,12 +47,12 @@ public class AlgsTest {
         stack.pop();
         int p = stack.pop();
 
-        System.out.println(p);
-        System.out.println(stack.size());
+        System.out.println("\npopped: " + p);
+        System.out.println("stack size after pop:"+stack.size());
 
         assertThat(p, is(4));
         assertThat(stack.size(),is(1));
 
-    
+
     }
 }
