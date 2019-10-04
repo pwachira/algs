@@ -1,0 +1,20 @@
+Configuration:
+	status: warn
+	name: AlgsConfig
+	appenders:
+		Console:
+			name: STDOUT
+			PatternLayout:
+				Pattern:"%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+	loggers:
+		logger:
+			-
+        		name: algs
+        		level: debug
+        		ThreadContextMapFilter:
+        		AppenderRef:
+          			ref: STDOUT
+	    Root:
+      		level: error
+    		AppenderRef:
+        		ref: STDOUT
