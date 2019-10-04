@@ -1,8 +1,7 @@
 package sort;
 
 public interface Sort {
-	
-	void doSort();
-	void setArray(int[] array);
+
+	void doSort(int[] arr);
 
 }
