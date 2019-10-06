@@ -1,4 +1,4 @@
-package sort;
+package com.wchr.algs.sort;
 
 public interface Sort {
 

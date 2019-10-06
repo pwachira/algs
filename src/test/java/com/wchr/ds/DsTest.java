@@ -1,10 +1,11 @@
-package algs;
+package com.wchr.ds;
 
 import org.junit.Test;
 
-
-import algs.GraphOps.Graph;
-import algs.StackOps.Stack;
+import com.wchr.ds.GraphOps;
+import com.wchr.ds.StackOps;
+import com.wchr.ds.GraphOps.Graph;
+import com.wchr.ds.StackOps.Stack;
 
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -12,7 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import java.util.Arrays;
 import java.util.List;
 
-public class AlgsTest {
+public class DsTest {
     @Test
     public void testGraph() {
 

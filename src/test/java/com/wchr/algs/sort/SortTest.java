@@ -1,8 +1,11 @@
-package sort;
+package com.wchr.algs.sort;
 
 import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
+
+import com.wchr.algs.sort.Quicksort;
+import com.wchr.algs.sort.Sort;
 
 public class SortTest {
 	@Test
